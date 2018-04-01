@@ -1,9 +1,11 @@
-﻿// 自動まばたき
-// ref. https://gist.github.com/dskjal/17034ad3b97bc6596248881f02caaafe
-// youten-yume2モデル対応
+﻿// Copyright 2018 @youten_redo
+// MIT 3-Clause https://opensource.org/licenses/BSD-3-Clause
 using UnityEngine;
 using System.Collections;
 
+// 自動まばたき
+// ref. https://gist.github.com/dskjal/17034ad3b97bc6596248881f02caaafe
+// youten-yume2モデル対応
 namespace YVTuber {
 	public class AutoBlink : MonoBehaviour
 	{

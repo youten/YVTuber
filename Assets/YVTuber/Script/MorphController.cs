@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿// Copyright 2018 @youten_redo
+// MIT 3-Clause https://opensource.org/licenses/BSD-3-Clause
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 // for youten-yum2 morph
 namespace YVTuber {
 	public class MorphController : MonoBehaviour {
-		public static bool keyEnable = true; // true時のみキー入力操作が有効
 
 		SkinnedMeshRenderer refFace;
 		static int FACE_INDEX_EYECLOSEL = 0;
@@ -24,18 +25,25 @@ namespace YVTuber {
 		}
 
 		void Update () {
-			if (keyEnable) {
-				if (Input.GetKeyDown (KeyCode.Space)) { // reset
-					resetMorph ();
-				} else if (Input.GetKeyDown (KeyCode.H)) { // half close
+			if (XRVive.isLeftTriggerTouchGetKey() && XRVive.isLeftTrackPadPressGetKey()) {
+				if (XRVive.isLeftTrackPadLeftUpTouched()) {
 					setEyeHalfClose ();
-				} else if (Input.GetKeyDown (KeyCode.L)) { // eye line --
-					setEyeLine ();
-				} else if (Input.GetKeyDown (KeyCode.S)) { // small eye
-					setEyeSmall ();
-				} else if (Input.GetKeyDown (KeyCode.X)) { // >< eye
+				} else if (XRVive.isLeftTrackPadRightUpTouched()) {
 					setEyeX ();
-				} else if (Input.GetKeyDown (KeyCode.N)) { // smile
+				} else if (XRVive.isLeftTrackPadLeftDownTouched()) {
+					resetMorph ();
+				} else if (XRVive.isLeftTrackPadRightDownTouched()) {
+					resetMorph ();
+				}
+			}
+			if (XRVive.isRightTriggerTouchGetKey() && XRVive.isRightTrackPadPressGetKey()) {
+				if (XRVive.isRightTrackPadLeftUpTouched()) {
+					setEyeSmall ();
+				} else if (XRVive.isRightTrackPadRightUpTouched()) {
+					setEyeLine ();
+				} else if (XRVive.isRightTrackPadLeftDownTouched()) {
+					setEyeSmile ();
+				} else if (XRVive.isRightTrackPadRightDownTouched()) {
 					setEyeSmile ();
 				}
 			}

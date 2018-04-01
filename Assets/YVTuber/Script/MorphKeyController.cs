@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Copyright 2018 @youten_redo
+// MIT 3-Clause https://opensource.org/licenses/BSD-3-Clause
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
