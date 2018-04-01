@@ -1,5 +1,5 @@
 ﻿// Copyright 2018 @youten_redo
-// MIT 3-Clause https://opensource.org/licenses/BSD-3-Clause
+// MIT https://opensource.org/licenses/MIT
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
