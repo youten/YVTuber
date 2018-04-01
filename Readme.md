@@ -2,6 +2,8 @@ YVTuber
 ====
 YVTuber(Yume VTuber System) is sample Unity project for VTuber(Virtual YouTuber).
 
+![Figure 1 Unity Editor](editor-screenshot1.png) 
+
 # Usage
 1. Setup Steam VR (I use HTC Vive).  
 2. Install Unity (I use 2017.3.0p1) and Open this Project.  
