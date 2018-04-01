@@ -8,13 +8,13 @@ namespace MecanimIKPlus
 	
 	public class XR_Basic_Function_CS : MonoBehaviour
 	{
-
 		public string recenterInputName = "Submit";
 		public string reloadInputName = "Fire3";
+		[SerializeField] TrackingSpaceType trackingSpaceType = TrackingSpaceType.Stationary;
 
 		void Start ()
 		{
-			XRDevice.SetTrackingSpaceType (TrackingSpaceType.Stationary);
+			XRDevice.SetTrackingSpaceType (trackingSpaceType);
 		}
 
 		void Update ()

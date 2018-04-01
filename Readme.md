@@ -17,6 +17,8 @@ YVTuber(Yume VTuber System) is sample Unity project for VTuber(Virtual YouTuber)
 
 # Scenes
 - Basic: Basic Scene, all assets and scripts are included in this repository.  
+- WithLipSync: With OVRLipSync. If you use OVRLipSync, you must agree EULA.
+- WithTrackerSandal: With 2 (or more)Tracker, tracking left and right feet.
 
 
 # License
