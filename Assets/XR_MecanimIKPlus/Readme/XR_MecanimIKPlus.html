@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="Improved Mecanim IK for XR Avatar." name="description" /><title>
+XR Mecanim IK Plus</title>
+
+<style type="text/css">
+<!--
+body {
+font-family: Arial, Helvetica, Verdana, sans-serif;
+background-color: white;
+color: black;
+text-align: Left;
+}
+.auto-style1 {
+	font-size: xx-large;
+}
+-->
+</style></head>
+<body>
+<p>
+<span class="auto-style1">&nbsp;</span><strong><em><span class="auto-style1">XR Mecanim IK Plus&nbsp;</span></em></strong></p>
+<p style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<strong>[警告と免責事項]</strong><br />
+VRコンテンツのため、対象年齢は13歳以上とします。VR機器の取扱説明書に従い、安全に配慮して利用してください。<br />
+このソフトウェアを使用したことによって、いかなる損害が発生しても、製作者は一切の責任を負わないものとします。各自の責任においてご使用ください。<br />
+</p>
+<p style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<br />
+</p>
+<p style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<strong>[概要]</strong><br />
+Unityの標準機能であるMecanimのIKを使用して、VR空間でアバターをそれっぽく動かすための仕組みです。<br />
+女の子に変身して鏡の前でウフフキャハハしたり、バーチャルYouTuberっぽい事ができます。<br />
+Unity2017.2で製作しています。それ以前のバージョンではスクリプト内のXRをVRに書き換える必要があります。<br />
+VIVEで製作しましたが、おそらくOculus Riftでも動くかと思います。Win MRはちょっと判らないです(汗)<br />
+MecanimのIKをいくつかの簡単なスクリプトで補完しているだけですので、必要に応じて改造して使用して下さい。<br />
+足の動きはハンドコントローラーを使用したギコチナイものですので、オマケ程度にお考え下さい。<br />
+VIVEトラッカーを使用して改造すれば、より自然に動けるかもしれません。<br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HdaHCUN6IfM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></p>
+<p style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+<strong>[インポート方法]</strong><br />新しいプロジェクトを作り、"XR_MecanimIKPlus.unitypackage"をインポートします。<br />
+ハンドコントローラーの入力に必要な情報と、XRの設定を下記の手順で上書きします。<br />
+&nbsp;&nbsp;&nbsp; ファイルブラウザを使用してプロジェクト内の"SettingFiles.zip"を解凍し、"InputManager.asset"と"ProjectSettings.asset"をコピー。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; プロジェクト名 &gt;&gt; Assets &gt;&gt; XR_MecanimIKPlus 
+&gt;&gt; SettingFiles.zip<br />&nbsp;&nbsp;&nbsp; プロジェクト内の"ProjectSettings"フォルダを見つけてペースト・上書き。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; プロジェクト名 &gt;&gt; "ProjectSettings"<br />
+デモシーンを動かすためには、ユニティちゃんの公式モデルパッケージが必要です。<br />
+下記のページにてライセンス条項をよく読んだ上で「ユニティちゃん 
+3Dモデルデータ」をダウンロードして、このプロジェクトにインポートして下さい。(2017.12.31現在 Ver.1.2.1)<br />
+<a href="http://unity-chan.com/contents/guideline/" target="_blank">
+http://unity-chan.com/contents/guideline/</a><br /></p>
+<p>
+　</p>
+<p>
+<strong style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+[使い方]</strong><br style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;" />
+まずはデモシーン"Demo_01"を開いて遊んでみて下さい。<br />
+着席モード"TrackingSpaceType.Stationary"がスクリプト内で設定されています。<br />
+<br />
+[VIVEコントローラー]<br />
+&nbsp;&nbsp;&nbsp; 右手メニューボタン &gt;&gt; 位置リセット<br />
+&nbsp;&nbsp;&nbsp; 左手メニューボタン &gt;&gt; シーンリセット<br />
+&nbsp;&nbsp;&nbsp; 左右グリップボタン &gt;&gt; 足の連動<br />
+<br />
+[Oculus Touch]<br />
+&nbsp;&nbsp;&nbsp; Aボタン &gt;&gt; 位置リセット<br />
+&nbsp;&nbsp;&nbsp; Xボタン &gt;&gt; シーンリセット<br />
+&nbsp;&nbsp;&nbsp; 左右グリップボタン &gt;&gt; 足の連動<br />
+<br />
+<br />
+胴体の位置は、左右の足の中心が基準になります。<br />
+胴体の角度Y軸は、左右の足の角度と両手の位置が基準になります。<br />
+<br />
+[Tips]<br />
+足を上げるときは、なるべくコントローラーを水平に保ちましょう。</p>
+<p>
+&nbsp;</p>
+<p>
+<strong style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+[各部の説明]</strong><br style="color: rgb(0, 0, 0); font-family: Meiryo; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;" />
+<img alt="Title &quot;Chobi's Atelier&quot;" src="image_XR_MecanimIKPlus/001.jpg" height="310" width="210" /><br />
+<br />
+"[XR CameraRig]"<br />
+&nbsp;&nbsp;&nbsp; VR用のカメラと手、そしてIKのためのターゲットが含まれています。<br />
+&nbsp;&nbsp;&nbsp; アバターの目の高さに合わせておくと設定が楽になります。<br />
+&nbsp;&nbsp;&nbsp; 
+アタッチされているスクリプト"XR_Basic_Function_CS"は、着席モードの指定、位置リセット、シーンリセットを実行します。<br />
+<br />
+<br />
+"Camera (Eye)"<br />
+&nbsp;&nbsp;&nbsp; VR用のカメラです。<br />
+&nbsp;&nbsp;&nbsp; 初期位置のままでOK。<br />
+<br />
+<br />
+"IK_Target_LookAt"<br />
+&nbsp;&nbsp;&nbsp; MecanimのIKが頭部をコントロールするために必要なターゲットです。<br />
+&nbsp;&nbsp;&nbsp; 初期位置のままでOK。<br />
+<br />
+<br />
+"IK_Target_Body"<br />
+&nbsp;&nbsp;&nbsp; MecanimのIKが胴体をコントロールするために必要なターゲットです。<br />
+&nbsp;&nbsp;&nbsp; 初期位置のままでOK。<br />
+&nbsp;&nbsp;&nbsp; 
+アタッチされているスクリプト"IK_Body_Linkage_CS"が、頭・手・足の位置・角度を読み取ってこのオブジェクトを制御します。<br />
+&nbsp;&nbsp;&nbsp;
+<img alt="Title &quot;Chobi's Atelier&quot;" src="image_XR_MecanimIKPlus/002.jpg" height="216" width="414" /><br />
+&nbsp;&nbsp;&nbsp; 'Eye Transform'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 同ヒエラルキー内の"Camera (Eye)"を入れて下さい。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初期設定のままでOK。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Left Hand Target'<br />
+&nbsp;&nbsp;&nbsp; 'Right Hand Target'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+同ヒエラルキー内の"IK_Target_Hand_L"または"IK_Target_Hand_R"を入れて下さい。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初期設定のままでOK。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Left Foot Target'<br />
+&nbsp;&nbsp;&nbsp; 'Right Foot Target'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+同ヒエラルキー内の"IK_Target_Foot_L"または"IK_Target_Foot_R"を入れて下さい。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初期設定のままでOK。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Pivot Transform'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+同ヒエラルキー内の"IK_Pivot"を入れて下さい。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初期設定のままでOK。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Offset Y'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 目(カメラ)から胴体までのおおよその距離を入力してください。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; カメラとアバターの目の高さが一致しない場合に調整します。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; 'Offset Z'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; アバターがへっぴり腰になりやすい時に調整して下さい。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Max Torsion Angle'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 手の位置に連動して胴体をひねる時の最大角度を設定します。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Arm Length'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 手の位置に連動して胴体をひねる際に利用される値です。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; おおよその腕の長さの半分を入力してください。<br />
+<br />
+<br />
+"IK_Target_Hand_L"<br />
+"IK_Target_Hand_R"<br />
+&nbsp;&nbsp;&nbsp; MecanimのIKが手をコントロールするために必要なターゲットです。<br />
+&nbsp;&nbsp;&nbsp; ハンドコントローラーの位置・角度をトラッキングするためのスクリプトが付いています。<br />
+&nbsp;&nbsp;&nbsp; 初期位置・初期設定のままでOK。<br />
+<br />
+<br />
+"IK_Target_Foot_L"<br />
+"IK_Target_Foot_R"<br />
+&nbsp;&nbsp;&nbsp; MecanimのIKが足をコントロールするために必要なターゲットです。<br />
+&nbsp;&nbsp;&nbsp; 足の初期位置になるので、地面より少し浮かせてセットして下さい。<br />
+&nbsp;&nbsp;&nbsp;
+<img alt="Title &quot;Chobi's Atelier&quot;" src="image_XR_MecanimIKPlus/003.jpg" height="161" width="413" /><br />
+&nbsp;&nbsp;&nbsp; 'Body Target'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 同ヒエラルキー内の"IK_Target_Body"を入れて下さい。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初期設定のままでOK。<br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; 'Hand Target'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 同ヒエラルキー内の"IK_Target_Hand_L"または"IK_Target_Hand_R"を入れて下さい。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初期設定のままでOK。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Ground Offset'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 足が地面にめり込んでしまう場合に調整します。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Follow Speed'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 足の追従スピードを調整できます。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Offset X'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ハンドコントローラーの位置に対して、どのていど左右方向にずらすかを調整できます。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Offset Z'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ハンドコントローラーの位置に対して、どのていど前後方向にずらすかを調整できます。<br />
+<br />
+&nbsp;&nbsp;&nbsp; 'Input Name'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 使用するトリガーのInputManager内での名前を入力します。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Input.GetAxisを使用しているため、ボタンを使用する場合はスクリプトを改造する必要があります。<br />
+<br />
+<br />
+"IK_Pivot"<br />
+&nbsp;&nbsp;&nbsp; 胴体の位置・角度を算出するために使用されるオブジェクトです。<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 初期位置のままでOK。<br />
+<br />
+<br />
+"unitychan_VRAvatar"<br />
+&nbsp;&nbsp;&nbsp; 必要なスクリプトをセットしたユニティちゃんのアバターです。<br />
+&nbsp;&nbsp;&nbsp; 
+AnimatorにはIKの設定をしただけの空っぽのAnimatorControllerが設定してあります。必要に応じて変更してください。<br />
+&nbsp;&nbsp;&nbsp; 二つのスクリプト"IK_CS"と"IK_Head_Linkage_CS"が追加されています。<br />
+<br />
+&nbsp;&nbsp;&nbsp; "IK_CS"はMecanimのIKを動かすための基本的なスクリプトです。<br />
+&nbsp;&nbsp;&nbsp; それぞれに対応するIKのターゲットをドラッグ&amp;ドロップして下さい。<br />
+&nbsp;&nbsp;&nbsp; ユニティちゃんの手が袖にめり込みやすいので、手の回転ウェイトを0.5にしてありますがお好みで変更してください。<br />
+&nbsp;&nbsp;&nbsp;
+<img alt="Title &quot;Chobi's Atelier&quot;" src="image_XR_MecanimIKPlus/004.jpg" height="306" width="412" /><br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; "IK_Head_Linkage_CS"は頭と首の回転を制御するためのスクリプトです。<br />
+&nbsp;&nbsp;&nbsp; MecanimのIKでは首をかしげる動作が出来ないため、これで補完しています。<br />
+&nbsp;&nbsp;&nbsp;
+<img alt="Title &quot;Chobi's Atelier&quot;" src="image_XR_MecanimIKPlus/005.jpg" height="106" width="412" /><br />
+&nbsp;&nbsp;&nbsp; 'Eye Transform'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"[XR CameraRig]"内にある"Camera (eye)"を入れて下さい。<br />
+<br />
+&nbsp;&nbsp;&nbsp; ''Head Transform"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+アバターのHeadボーンに相当するゲームオブジェクトをドラッグ&amp;ドロップして下さい。<br />
+<br />
+&nbsp;&nbsp;&nbsp; "Neck Transform"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+アバターのNeckボーンに相当するゲームオブジェクトをドラッグ&amp;ドロップして下さい。<br />
+<br />
+&nbsp;&nbsp;&nbsp; "Switch Axis XZ"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 首の回転系が異なる場合に切り替えて使用します。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ユニティちゃんモデルでは有効にする必要がありますが、他の多くのモデルでは無効にして下さい。<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+</body></html>
