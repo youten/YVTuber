@@ -18,7 +18,7 @@ YVTuber(Yume VTuber System) is sample Unity project for VTuber(Virtual YouTuber)
 
 
 # License
-BSD 3-Clause  
+apply BSD 3-Clause Licsense exclude "HandPoses", "XR_MecanimIKPlus" folder.
 
 Copyright 2018 @youten_redo
 
