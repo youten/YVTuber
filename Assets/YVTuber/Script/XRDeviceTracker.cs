@@ -39,7 +39,7 @@ public class XRDeviceTracker : MonoBehaviour {
 
 	void Update () {
 		InputTracking.GetNodeStates (nodeStates);
-		if (nodeStates.Count + 1 >= (int)nodeIndex) {
+		if (nodeStates.Count > (int)nodeIndex) {
 			Vector3 pos;
 			nodeStates [(int)nodeIndex].TryGetPosition (out pos);
 			if (targetTransform == null) {				
