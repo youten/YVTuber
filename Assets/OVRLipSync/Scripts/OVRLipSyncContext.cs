@@ -32,13 +32,13 @@ public class OVRLipSyncContext : OVRLipSyncContextBase
     private float debugFrameTimer = 0.0f;
     private float debugFrameTimeoutValue = 0.1f;	// sec.    /// <summary>    /// Start this instance.    /// Note: make sure to always have a Start function for classes that have editor scripts.    /// </summary>
     void Start()
-    {       // Add a listener to the OVRMessenger for touch events        OVRMessenger.AddListener<OVRTouchpad.TouchEvent>("Touchpad", LocalTouchEventCallback);    }
+    {		// HACK: disable control debug-mode by key or mouse-click         // Add a listener to the OVRMessenger for touch events        // OVRMessenger.AddListener<OVRTouchpad.TouchEvent>("Touchpad", LocalTouchEventCallback);    }
     /// <summary>    /// Run processes that need to be updated in our game thread    /// </summary>    void Update()
     {		// HACK: disable control debug-mode by key or mouse-click 		return;		/*        // Turn loopback on/off        if (Input.GetKeyDown(loopback))
 		{            audioMute = !audioMute;            OVRLipSyncDebugConsole.Clear();            OVRLipSyncDebugConsole.ClearTimeout(1.5f);
 			if (audioMute) {				OVRLipSyncDebugConsole.Log ("LOOPBACK MODE: ENABLED");
 			} else {				OVRLipSyncDebugConsole.Log ("LOOPBACK MODE: DISABLED");			}        }        else if (Input.GetKeyDown(debugVisemes))        {            showVisemes = !showVisemes;
-			if (showVisemes) {				Debug.Log ("DEBUG SHOW VISEMES: ENABLED");			}            else {                OVRLipSyncDebugConsole.Clear();                Debug.Log("DEBUG SHOW VISEMES: DISABLED");            }
+			if (showVisemes) {				Debug.Log ("DEBUG SHOW VISEMES: ENABLED");			}            else {                OVRLipSyncDebugConsole.Clear();                Debug.Log("DEBUG SHOW VISEMES: DISABLED");	            }
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))        {            gain -= 1.0f;            if (gain < 1.0f) gain = 1.0f;
             string g = "LINEAR GAIN: ";            g += gain;

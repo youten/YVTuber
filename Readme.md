@@ -6,7 +6,7 @@ YVTuber(Yume VTuber System) is sample Unity project for VTuber(Virtual YouTuber)
 
 # Usage
 1. Setup Steam VR (I use HTC Vive).  
-2. Install Unity (I use 2017.3.0p1) and Open this Project.  
+2. Install Unity (I use 2017.3.1p4) and Open this Project.  
 3. Open YVTUber/Basic Scnene and Play.  
 
 # Assets and Folder description
@@ -14,12 +14,12 @@ YVTuber(Yume VTuber System) is sample Unity project for VTuber(Virtual YouTuber)
 - OVRLipSync: Oculus Lipsync Unity
 	- https://developer.oculus.com/downloads/package/oculus-lipsync-unity/
 - XR_MecanimIKPlus: XR Mecanim IK Plus by @chobi_luck  
+	- http://chobi-glass.com/Unity/XR_MecanimIKPlus.html
 - youten-yume: 3D Model created by PMCAv0.0.6  
 - YVTuber: project main folder, include scripts and etc.  
 
 # Scenes
-- Basic: Basic Scene, all assets and scripts are included in this repository.  
-- WithLipSync: With OVRLipSync. If you use OVRLipSync, you must agree EULA.  
+- Basic: Basic Scene, all assets and scripts are included in this repository. If you use OVRLipSync, you must agree EULA.  
 - WithTrackerSandal: With 2 (or more)Tracker, tracking left and right feet.  
 
 
