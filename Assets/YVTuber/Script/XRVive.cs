@@ -15,10 +15,10 @@ namespace YVTuber {
 		// また、Axis入力はEdit -> Project Settings -> InputでInput Managerに対して設定の追加が必要です
 		// ＜要追加＞
 		// Name:"Grip L" Type:Joystick Axis Axis:11th axis
-		// Name:"Grip R" Type:Joystick Axis Axis:11th axis
+		// Name:"Grip R" Type:Joystick Axis Axis:12th axis
 		// Name:"RightHorizontal" Type:Joystick Axis Axis:4th axis
 		// Name:"RightVertical" Type:Joystick Axis Axis:5th axis Invert:on **
-		// **Right TrackPadのVerticalだけ上下が反転してる（2017.3.0p1で確認、他ver.では直ってるかも）ので注意。
+		// **Right TrackPadのVerticalだけ上下が反転してる（2017.3.1p4で確認、他ver.では直ってるかも）ので注意。
 		// ＜既存設定で利用可能＞
 		// Name:"Horizontal" Type:Joystick Axis Axis:X axis
 		// Name:"Vertical" Type:Joystick Axis Axis:Y axis
