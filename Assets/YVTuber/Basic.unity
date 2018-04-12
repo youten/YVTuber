@@ -401,8 +401,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 645652960}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -510,7 +509,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4117207173861108, guid: ce2629606d4578a43bf90935846c332f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce2629606d4578a43bf90935846c332f, type: 2}
@@ -520,7 +519,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 462238402}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 13700000, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
       propertyPath: m_BlendShapeWeights.Array.size
@@ -556,7 +555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
       propertyPath: m_Controller
@@ -577,10 +576,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &645652960 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400132, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
-  m_PrefabInternal: {fileID: 645652959}
 --- !u!1 &645652961 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100132, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}

@@ -392,8 +392,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1757366792}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -501,7 +500,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4117207173861108, guid: ce2629606d4578a43bf90935846c332f, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce2629606d4578a43bf90935846c332f, type: 2}
@@ -533,7 +532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1227907203
 MonoBehaviour:
@@ -576,7 +575,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1481541572
 MonoBehaviour:
@@ -753,7 +752,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 462238402}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 13700000, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
       propertyPath: m_BlendShapeWeights.Array.size
@@ -789,7 +788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
       propertyPath: m_Controller
@@ -810,10 +809,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &1757366792 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400132, guid: bdc8cbc8593eb894d9c0027b56123cc6, type: 3}
-  m_PrefabInternal: {fileID: 1757366791}
 --- !u!137 &1757366793 stripped
 SkinnedMeshRenderer:
   m_PrefabParentObject: {fileID: 13700000, guid: bdc8cbc8593eb894d9c0027b56123cc6,
@@ -1137,7 +1132,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1950862998
 MonoBehaviour:

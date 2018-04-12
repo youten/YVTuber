@@ -30,7 +30,7 @@ using System.Runtime.InteropServices;
 /// OVRLipSync interfaces into the Oculus lip-sync engine. This component should be added
 /// into the scene once. 
 ///
-/// </summary>
+/// </summary>// OVRLipSync must awake before OVRLipSyncContext, set Order.[DefaultExecutionOrder(-1)]
 public class OVRLipSync : MonoBehaviour 
 {
     // Error codes that may return from Lip-Sync engine
