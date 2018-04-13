@@ -6,7 +6,7 @@ using UnityEngine;
 
 // for youten-yume2 morph
 namespace YVTuber {
-	public class Morph : MonoBehaviour {
+	public class Morph {
 		SkinnedMeshRenderer refFace;
 		static int FACE_INDEX_EYECLOSEL = 0;
 		static int FACE_INDEX_EYECLOSER = 1;

@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/YVTuber/WithLipSync.unity
+    path: Assets/YVTuber/Basic.unity
     guid: 98c54fd8cfbd75240b17a09e1de8a378
