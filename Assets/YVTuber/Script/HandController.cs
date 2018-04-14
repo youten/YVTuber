@@ -8,6 +8,20 @@ using UnityEngine.XR;
 // Hand Motion Contorller for HandPoses 0.2.0
 namespace YVTuber {
 	public class HandController : MonoBehaviour {
+		private string LEFT_HAND_POSE_NAME = "LeftHandPose";
+		private string RIGHT_HAND_POSE_NAME = "RightHandPose";
+		enum HandPose {
+			_base = 0,
+			fist = 1,
+			v = 2,
+			open = 3,
+			like = 4,
+			ok = 5,
+			point = 6,
+			rocknroll = 7,
+			otome_grip = 8,
+		};
+
 		private Animator animator;
 
 		void Start() {
@@ -19,30 +33,30 @@ namespace YVTuber {
 		void Update() {
 			// Left Controller Trackpad Press:8 Touch:16
 			// Right Controller Trackpad Press:9 Touch:17
-			if (XRVive.isLeftTrackPadPressGetKeyUp()) {
-				animator.Play ("hand_l_base");
-			} else if (XRVive.isLeftTrackPadPressGetKey()) {
+			if (XRVive.isLeftTrackPadTouchGetKeyUp()) {
+				animator.SetInteger (LEFT_HAND_POSE_NAME, (int)HandPose._base);
+			} else if (XRVive.isLeftTrackPadTouchGetKeyDown()) {
 				if (XRVive.isLeftTrackPadLeftUpTouched()) {
-					animator.Play ("hand_l_point");
+					animator.SetInteger (LEFT_HAND_POSE_NAME, (int)HandPose.rocknroll);
 				} else if (XRVive.isLeftTrackPadRightUpTouched()) {
-					animator.Play ("hand_l_rocknroll");
+					animator.SetInteger (LEFT_HAND_POSE_NAME, (int)HandPose.point);
 				} else if (XRVive.isLeftTrackPadLeftDownTouched()) {
-					animator.Play ("hand_l_fist");
+					animator.SetInteger (LEFT_HAND_POSE_NAME, (int)HandPose.v);
 				} else if (XRVive.isLeftTrackPadRightDownTouched()) {
-					animator.Play ("hand_l_v");
+					animator.SetInteger (LEFT_HAND_POSE_NAME, (int)HandPose.fist);
 				}
 			}
-			if (Input.GetKeyUp(KeyCode.JoystickButton9)) {
-				animator.Play ("hand_r_base");
-			} else if (Input.GetKey(KeyCode.JoystickButton9)) {
+			if (XRVive.isRightTrackPadTouchGetKeyUp()) {
+				animator.SetInteger (RIGHT_HAND_POSE_NAME, (int)HandPose._base);
+			} else if (XRVive.isRightTrackPadTouchGetKeyDown()) {
 				if (XRVive.isRightTrackPadLeftUpTouched()) {
-					animator.Play ("hand_r_point");
+					animator.SetInteger (RIGHT_HAND_POSE_NAME, (int)HandPose.point);
 				} else if (XRVive.isRightTrackPadRightUpTouched()) {
-					animator.Play ("hand_r_rocknroll");
+					animator.SetInteger (RIGHT_HAND_POSE_NAME, (int)HandPose.rocknroll);
 				} else if (XRVive.isRightTrackPadLeftDownTouched()) {
-					animator.Play ("hand_r_fist");
+					animator.SetInteger (RIGHT_HAND_POSE_NAME, (int)HandPose.fist);
 				} else if (XRVive.isRightTrackPadRightDownTouched()) {
-					animator.Play ("hand_r_v");
+					animator.SetInteger (RIGHT_HAND_POSE_NAME, (int)HandPose.v);
 				}
 			}
 		}
