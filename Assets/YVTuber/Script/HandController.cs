@@ -8,7 +8,6 @@ using UnityEngine.XR;
 // Hand Motion Contorller for HandPoses 0.2.0
 namespace YVTuber {
 	public class HandController : MonoBehaviour {
-		public GameObject targetModel;
 		private Animator animator;
 
 		void Start() {
