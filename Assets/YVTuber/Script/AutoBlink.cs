@@ -1,10 +1,13 @@
-﻿// Copyright 2018 @youten_redo
-// MIT https://opensource.org/licenses/MIT
+﻿// **License Caution**
+// This script based dskjal's code (https://gist.github.com/dskjal/17034ad3b97bc6596248881f02caaafe) ,
+// Origin belongs to Unity-chan licnse (http://unity-chan.com/contents/license_jp/) 
+// or Asset Store Terms of Service and EULA (https://unity3d.com/jp/legal/as_terms) (selectable).
+// But, a case that "I want to re-distribute modified scripts with free license as much as possible",
+// difficult to apply both, use at your own risk.
 using UnityEngine;
 using System.Collections;
 
 // 自動まばたき
-// ref. https://gist.github.com/dskjal/17034ad3b97bc6596248881f02caaafe
 // youten-yume2モデル対応
 namespace YVTuber {
 	public class AutoBlink : MonoBehaviour
