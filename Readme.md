@@ -1,13 +1,13 @@
 YVTuber
 ====
-YVTuber(Yume VTuber System) is sample Unity project for VTuber(Virtual YouTuber).  
+YVTuber(Yume VTuber System) is Unity project for VTuber(Virtual YouTuber).  
 
 ![Figure 1 Unity Editor](editor-screenshot1.png) 
 
 # Usage
 1. Setup Steam VR (I use HTC Vive).  
 2. Install Unity (I use 2017.3.1p4) and Open this Project.  
-3. Open YVTUber/Basic Scnene and Play.  
+3. Open YVTuber/Basic Scnene and Play.  
 
 # Assets and Folder description
 - HandPoses: HandPoses by @m2wasabi  
@@ -24,7 +24,8 @@ YVTuber(Yume VTuber System) is sample Unity project for VTuber(Virtual YouTuber)
 
 
 # License
-apply MIT License exclude "HandPoses", "XR_MecanimIKPlus", "OVRLipSync" folder and some Plugins.
+apply MIT License exclude "HandPoses", "XR_MecanimIKPlus", "OVRLipSync" folder, 
+"YVTuber/Script/AutoBlink.cs" and some Plugins.
 
 Copyright 2018 @youten_redo
 
