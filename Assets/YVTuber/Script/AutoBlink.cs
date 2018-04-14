@@ -70,8 +70,8 @@ namespace YVTuber {
 			}
 
 			private void setRatio(float ratio) {
-				refFace.SetBlendShapeWeight(0, ratio);
-				refFace.SetBlendShapeWeight(1, ratio);
+				refFace.SetBlendShapeWeight(0, ratio); // 0:left blink morph index
+				refFace.SetBlendShapeWeight(1, ratio); // 1:right blink morph index
 			}
 
 			// Must call every frame
@@ -102,7 +102,9 @@ namespace YVTuber {
 
 		void Awake ()
 		{
-			refFace = GameObject.Find("Body").GetComponent<SkinnedMeshRenderer>();
+			if (refFace == null) {
+				refFace = GameObject.Find("Body").GetComponent<SkinnedMeshRenderer>();
+			}
 			eyelidAnimator = new EyelidAnimator(refFace);
 		}
 
