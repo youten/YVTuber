@@ -450,7 +450,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 875b1ca5201235a419c1421c1998d2b7, type: 3}
+  m_Texture: {fileID: 2800000, guid: e9bfa6dd8816fcf498a03f75a66b153c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -504,6 +504,52 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce2629606d4578a43bf90935846c332f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &791383580
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4155529400344290, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155529400344290, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155529400344290, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155529400344290, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155529400344290, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155529400344290, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155529400344290, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155529400344290, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510767653611622, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9900a7156f5b63a419eed9245313a8a8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1227907201
 GameObject:
@@ -938,7 +984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2fb63bbb398294289fed1546fd0a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetModel: {fileID: 1757366800}
 --- !u!1001 &1824438590
 Prefab:
   m_ObjectHideFlags: 0
