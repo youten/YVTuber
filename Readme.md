@@ -13,6 +13,8 @@ YVTuber(Yume VTuber System) is Unity project for VTuber(Virtual YouTuber).
 - HandPoses: HandPoses by @m2wasabi  
 - OVRLipSync: Oculus Lipsync Unity
 	- https://developer.oculus.com/downloads/package/oculus-lipsync-unity/
+- UnityCam: Unity3D Virtual webcam plugin by MHD Yamen Saraiji
+	- https://github.com/mrayy/UnityCam
 - XR_MecanimIKPlus: XR Mecanim IK Plus by @chobi_luck  
 	- http://chobi-glass.com/Unity/XR_MecanimIKPlus.html
 - youten-yume: 3D Model created by PMCAv0.0.6  
@@ -24,7 +26,7 @@ YVTuber(Yume VTuber System) is Unity project for VTuber(Virtual YouTuber).
 
 
 # License
-apply MIT License exclude "HandPoses", "XR_MecanimIKPlus", "OVRLipSync" folder, 
+apply MIT License exclude "HandPoses", "OVRLipSync", "UnityCam", "XR_MecanimIKPlus" folder, 
 "YVTuber/Script/AutoBlink.cs" and some Plugins.
 
 Copyright 2018 @youten_redo
