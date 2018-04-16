@@ -35,7 +35,8 @@ namespace YVTuber {
 			// Right Controller Trackpad Press:9 Touch:17
 			if (XRVive.isLeftTrackPadTouchGetKeyUp()) {
 				animator.SetInteger (LEFT_HAND_POSE_NAME, (int)HandPose._base);
-			} else if (XRVive.isLeftTrackPadTouchGetKeyDown()) {
+			}
+			if (XRVive.isLeftTrackPadTouchGetKey()) {
 				if (XRVive.isLeftTrackPadLeftUpTouched()) {
 					animator.SetInteger (LEFT_HAND_POSE_NAME, (int)HandPose.rocknroll);
 				} else if (XRVive.isLeftTrackPadRightUpTouched()) {
@@ -48,7 +49,8 @@ namespace YVTuber {
 			}
 			if (XRVive.isRightTrackPadTouchGetKeyUp()) {
 				animator.SetInteger (RIGHT_HAND_POSE_NAME, (int)HandPose._base);
-			} else if (XRVive.isRightTrackPadTouchGetKeyDown()) {
+			}
+			if (XRVive.isRightTrackPadTouchGetKey()) {
 				if (XRVive.isRightTrackPadLeftUpTouched()) {
 					animator.SetInteger (RIGHT_HAND_POSE_NAME, (int)HandPose.point);
 				} else if (XRVive.isRightTrackPadRightUpTouched()) {
