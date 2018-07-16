@@ -67,8 +67,8 @@ namespace YVTuber {
 			}
 
 			private void setRatio(float ratio) {
-				refFace.SetBlendShapeWeight(0, ratio); // 0:left blink morph index
-				refFace.SetBlendShapeWeight(1, ratio); // 1:right blink morph index
+				refFace.SetBlendShapeWeight(Morph.FACE_INDEX_EYECLOSEL, ratio);
+				refFace.SetBlendShapeWeight(Morph.FACE_INDEX_EYECLOSER, ratio);
 			}
 
 			// Must call every frame

@@ -10,7 +10,9 @@ namespace YVTuber {
 		Morph morph;
 
 		void Awake () {
-			morph = new Morph(GameObject.Find("Body").GetComponent<SkinnedMeshRenderer>(),
+			// for youten-yume2 SkinnedMeshRenderer named "Body",
+			// for Alicia VRM SKinnedMeshRenderer named "face"
+			morph = new Morph(GameObject.Find("face").GetComponent<SkinnedMeshRenderer>(),
 				GetComponent<AutoBlink>());
 		}
 

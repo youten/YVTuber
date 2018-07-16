@@ -6,7 +6,7 @@ YVTuber(Yume VTuber System) is Unity project for VTuber(Virtual YouTuber).
 
 # Usage
 1. Setup Steam VR (I use HTC Vive).  
-2. Install Unity (I use 2017.3.1p4) and Open this Project.  
+2. Install Unity (I use 2017.4.7f1) and Open this Project.  
 3. Open YVTuber/Basic Scnene and Play.  
 
 # Assets and Folder description
@@ -19,15 +19,18 @@ YVTuber(Yume VTuber System) is Unity project for VTuber(Virtual YouTuber).
 	- http://chobi-glass.com/Unity/XR_MecanimIKPlus.html
 - youten-yume: 3D Model created by PMCAv0.0.6  
 - YVTuber: project main folder, include scripts and etc.  
+- VRM: VRM Unity implementation
+    - https://github.com/dwango/UniVRM
+- Alicia: 3D Model VRM format
+    - http://3d.nicovideo.jp/works/td32797
 
 # Scenes
 - Basic: Basic Scene, all assets and scripts are included in this repository. If you use OVRLipSync, you must agree EULA.  
+- Alicia: model changed to Alicia VRM from youten-yume2 (Humanoid)
 - WithTrackerSandal: With 2 (or more)Tracker, tracking left and right feet.  
 
-
 # License
-apply MIT License exclude "HandPoses", "OVRLipSync", "UnityCam", "XR_MecanimIKPlus" folder, 
-"YVTuber/Script/AutoBlink.cs" and some Plugins.
+apply MIT License exclude "Alicia", "HandPoses", "OVRLipSync", "UnityCam", "VRM", "XR_MecanimIKPlus" folder, "YVTuber/Script/AutoBlink.cs" and some Plugins.
 
 Copyright 2018 @youten_redo
 

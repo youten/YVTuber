@@ -8,13 +8,22 @@ using UnityEngine;
 namespace YVTuber {
 	public class Morph {
 		SkinnedMeshRenderer refFace;
-		static int FACE_INDEX_EYECLOSEL = 0;
-		static int FACE_INDEX_EYECLOSER = 1;
-		static int FACE_INDEX_EYESMILE = 28;
-		static int FACE_INDEX_EYEX = 35;
-		static int FACE_INDEX_EYELINE = 36;
-		static int FACE_INDEX_EYEJITOME = 38;
-		static int FACE_INDEX_EYESMALL = 41;
+		// for Alicia VRM
+		public static int FACE_INDEX_EYECLOSEL = 26;
+		public static int FACE_INDEX_EYECLOSER = 27;
+		public static int FACE_INDEX_EYESMILE = 25;
+		public static int FACE_INDEX_EYEX = 31;
+		public static int FACE_INDEX_EYELINE = 30;
+		public static int FACE_INDEX_EYEJITOME = 33;
+		public static int FACE_INDEX_EYESMALL = 35;
+		// for youten-yume2
+		// public static int FACE_INDEX_EYECLOSEL = 0;
+		// public static int FACE_INDEX_EYECLOSER = 1;
+		// public static int FACE_INDEX_EYESMILE = 28;
+		// public static int FACE_INDEX_EYEX = 35;
+		// public static int FACE_INDEX_EYELINE = 36;
+		// public static int FACE_INDEX_EYEJITOME = 38;
+		// public static int FACE_INDEX_EYESMALL = 41;
 		// モーフ変化と衝突するので自動まばたきのon/off制御を行う
 		AutoBlink refAutoBlink;
 
